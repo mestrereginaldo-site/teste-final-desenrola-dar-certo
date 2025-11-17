@@ -9,10 +9,10 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/$1"
+      "dest": "/dist/public/$1"
     }
   ],
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "outputDirectory": "dist/public",
   "installCommand": "npm install"
 }
