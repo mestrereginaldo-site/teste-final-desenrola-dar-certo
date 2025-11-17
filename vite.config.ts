@@ -1,13 +1,18 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  root: ".", // A raiz é onde está o index.html
   build: {
     outDir: "dist",
     emptyOutDir: true,
   },
-  server: {
-    port: 5000
-  }
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"), // Isso mapeia "@/ para a pasta "src"
+    },
+  },
+  publicDir: "public",
 });
