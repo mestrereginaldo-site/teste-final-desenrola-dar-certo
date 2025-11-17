@@ -6,12 +6,12 @@ export default defineConfig({
   plugins: [react()],
   root: ".", // A raiz é onde está o index.html
   build: {
-    outDir: "dist",
+    outDir: "dist/public",
     emptyOutDir: true,
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"), // Isso mapeia "@/ para a pasta "src"
+      "@": path.resolve(__dirname, "client/src"), // Isso mapeia "@/" para "client/src"
     },
   },
   publicDir: "public",
